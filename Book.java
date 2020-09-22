@@ -26,8 +26,7 @@ class Book
     private boolean courseText;
 
     /** Satisfies the requirement of problem 2.85, 2.88, 2.91, and 2.92.
-     * Set the author, title, pages, and refNumber fields when this object
-     * is constructed.
+     * Set the author, title, pages, and courseText fields when this object is constructed.
      */
     public Book(String bookAuthor, String bookTitle, int bookPages, boolean bookCourseText)
     {
