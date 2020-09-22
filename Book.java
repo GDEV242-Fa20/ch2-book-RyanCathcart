@@ -40,4 +40,18 @@ class Book
     {
         return title;
     }
+    
+    /** Satisfies the requirement of problem 2.84.
+     * Prints the current author of this Book.
+     */
+    public void printAuthor() {
+        System.out.println(author);
+    }
+    
+    /** Satisfies the requirement of problem 2.84.
+     * Prints the current title of this Book.
+     */
+    public void printTitle() {
+        System.out.println(title);
+    }
 }
