@@ -5,6 +5,11 @@
  *
  * @author Ryan Cathcart
  * @version Sep 21, 2020
+ * 
+ * 
+ * PROBLEM 2.86 Are the Book objects you have implemented immutable? Justify your answer: 
+ * The Book objects implemented are immutable because the variables are set at the creation of the 
+ * object, and there are no mutator/setter methods to change the objects' fields.
  */
 class Book
 {
@@ -65,5 +70,12 @@ class Book
      */
     public void printTitle() {
         System.out.println(title);
+    }
+    
+    /** Satisfies the requirement of problem 2.87.
+     * Prints the current title, author, and pages of this Book.
+     */
+    public void printDetails() {
+        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
     }
 }
