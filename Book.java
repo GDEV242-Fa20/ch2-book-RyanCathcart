@@ -20,8 +20,10 @@ class Book
     private int pages;
     // Satisfies the requirement of problem 2.88.
     private String refNumber;
+    // Satisfies the requirement of problem 2.91.
+    private int borrowed;
 
-    /** Satisfies the requirement of problem 2.85 and 2.88.
+    /** Satisfies the requirement of problem 2.85, 2.88, and 2.91.
      * Set the author, title, pages, and refNumber fields when this object
      * is constructed.
      */
@@ -31,6 +33,7 @@ class Book
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
+        borrowed = 0;
     }
 
     // Add the methods here ...
@@ -70,6 +73,15 @@ class Book
         return refNumber;
     }
     
+    /** Satisfies the requirement of problem 2.91.
+     * Provide access to the int holding the book's number of borrows
+     * @return refNumber
+     */
+    public int getBorrowed()
+    {
+        return borrowed;
+    }
+    
     /** Satisfies the requirement of problem 2.88 and 2.90.
      * Sets the refNumber of this Book
      * @param ref The new refNum for this Book.
@@ -81,6 +93,13 @@ class Book
         } else {
             System.out.println("ERROR: Entered reference number does not contain at least three characters.");
         }
+    }
+    
+    /** Satisfies the requirement of problem 2.91.
+     * Increments the borrowed field by 1.
+     */
+    public void borrow() {
+        borrowed++;
     }
     
     /** Satisfies the requirement of problem 2.84.
@@ -97,15 +116,16 @@ class Book
         System.out.println(title);
     }
     
-    /** Satisfies the requirement of problem 2.87 and 2.89.
+    /** Satisfies the requirement of problem 2.87, 2.89, 2.91.
      * Prints the current title, author, and pages of this Book.
      */
     public void printDetails() {
         System.out.print("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference Number: ");
         if (refNumber.length() > 0) {
-            System.out.println(refNumber);
+            System.out.print(refNumber);
         } else {
-            System.out.println("ZZZ");
+            System.out.print("ZZZ");
         }
+        System.out.println(", Times Borrowed: " + borrowed);
     }
 }
