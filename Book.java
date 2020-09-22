@@ -22,18 +22,21 @@ class Book
     private String refNumber;
     // Satisfies the requirement of problem 2.91.
     private int borrowed;
+    // Satisfies the requirement of problem 2.92.
+    private boolean courseText;
 
-    /** Satisfies the requirement of problem 2.85, 2.88, and 2.91.
+    /** Satisfies the requirement of problem 2.85, 2.88, 2.91, and 2.92.
      * Set the author, title, pages, and refNumber fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean bookCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
         borrowed = 0;
+        courseText = bookCourseText;
     }
 
     // Add the methods here ...
@@ -75,11 +78,20 @@ class Book
     
     /** Satisfies the requirement of problem 2.91.
      * Provide access to the int holding the book's number of borrows
-     * @return refNumber
+     * @return borrowed
      */
     public int getBorrowed()
     {
         return borrowed;
+    }
+    
+    /** Satisfies the requirement of problem 2.92.
+     * Provide access to the boolean holding the book's course text status
+     * @return courseText
+     */
+    public boolean isCourseText()
+    {
+        return courseText;
     }
     
     /** Satisfies the requirement of problem 2.88 and 2.90.
