@@ -3,8 +3,8 @@
  * This might form part of a larger application such
  * as a library system, for instance.
  *
- * @author Bill Crosbie
- * @version Feb 4, 2019
+ * @author Ryan Cathcart
+ * @version Sep 21, 2020
  */
 class Book
 {
@@ -23,7 +23,7 @@ class Book
     }
 
     // Add the methods here ...
-    /**
+    /** Satisfies the requirement of problem 2.83.
      * Provide access to the string holding the author's name
      * @return author
      */
@@ -32,7 +32,7 @@ class Book
         return author;
     }
     
-        /**
+    /** Satisfies the requirement of problem 2.83.
      * Provide access to the string holding the book's title
      * @return title
      */
@@ -40,9 +40,4 @@ class Book
     {
         return title;
     }
-    
-    
-    
-    
-    
 }
