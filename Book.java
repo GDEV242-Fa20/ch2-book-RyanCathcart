@@ -93,10 +93,15 @@ class Book
         System.out.println(title);
     }
     
-    /** Satisfies the requirement of problem 2.87.
+    /** Satisfies the requirement of problem 2.87 and 2.89.
      * Prints the current title, author, and pages of this Book.
      */
     public void printDetails() {
-        System.out.println("Title: " + title + ", Author: " + author + ", Pages: " + pages);
+        System.out.print("Title: " + title + ", Author: " + author + ", Pages: " + pages + ", Reference Number: ");
+        if (refNumber.length() > 0) {
+            System.out.println(refNumber);
+        } else {
+            System.out.println("ZZZ");
+        }
     }
 }
