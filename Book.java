@@ -18,9 +18,11 @@ class Book
     private String title;
     // Satisfies the requirement of problem 2.85.
     private int pages;
+    // Satisfies the requirement of problem 2.88.
+    private String refNumber;
 
-    /** Satisfies the requirement of problem 2.85.
-     * Set the author and title fields when this object
+    /** Satisfies the requirement of problem 2.85 and 2.88.
+     * Set the author, title, pages, and refNumber fields when this object
      * is constructed.
      */
     public Book(String bookAuthor, String bookTitle, int bookPages)
@@ -28,6 +30,7 @@ class Book
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
+        refNumber = "";
     }
 
     // Add the methods here ...
@@ -56,6 +59,24 @@ class Book
     public int getPages()
     {
         return pages;
+    }
+    
+    /** Satisfies the requirement of problem 2.88.
+     * Provide access to the string holding the book's refNumber
+     * @return refNumber
+     */
+    public String getRefNumber()
+    {
+        return refNumber;
+    }
+    
+    /** Satisfies the requirement of problem 2.88.
+     * Sets the refNumber of this Book
+     * @param ref The new refNum for this Book.
+     */
+    public void setRefNumber(String ref)
+    {
+        refNumber = ref;
     }
     
     /** Satisfies the requirement of problem 2.84.
