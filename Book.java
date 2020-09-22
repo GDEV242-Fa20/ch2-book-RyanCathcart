@@ -70,13 +70,17 @@ class Book
         return refNumber;
     }
     
-    /** Satisfies the requirement of problem 2.88.
+    /** Satisfies the requirement of problem 2.88 and 2.90.
      * Sets the refNumber of this Book
      * @param ref The new refNum for this Book.
      */
     public void setRefNumber(String ref)
     {
-        refNumber = ref;
+        if (ref.length() > 2) {
+            refNumber = ref;
+        } else {
+            System.out.println("ERROR: Entered reference number does not contain at least three characters.");
+        }
     }
     
     /** Satisfies the requirement of problem 2.84.
